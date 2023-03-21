@@ -2,11 +2,14 @@ version: '3'
 services:
   myapp:
     build: .
-    environment:
-      S3_ENDPOINT: http://localstack:4566
-    depends_on:
-      - localstack
+    volumes:
+      - myapp_data:/app/data
+    ports:
+      - "5000:5000"
   localstack:
     image: localstack/localstack
     ports:
       - "4566:4566"
+
+volumes:
+  myapp_data:
