@@ -1,11 +1,17 @@
-FROM python:3.9-slim
+FROM python:3.9
 
 WORKDIR /app
 
-COPY requirements.txt ./
-COPY templates /app/templates
+COPY hello.py .
+
+COPY templates/ templates/
+
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+ENV FLASK_APP=hello.py
 
-CMD [ "python", "./hello.py" ]
+
+EXPOSE 5000
+
+CMD ["flask", "run", "--host=0.0.0.0"]
