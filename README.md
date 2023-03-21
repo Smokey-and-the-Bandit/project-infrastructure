@@ -5,7 +5,7 @@ install newest python
 combine this repo and this one together:
 https://github.com/Smokey-and-the-Bandit/project-backend
 
-install localstack
+install localstack:
 pip install localstack
 
 install newest docker from website
