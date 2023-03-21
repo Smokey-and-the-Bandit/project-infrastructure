@@ -1,23 +1,23 @@
 # project-infrastructure
 
-install newest python
+1.install newest python
 
-combine this repo and this one together:
+2.combine this repo and this one together:
 
 https://github.com/Smokey-and-the-Bandit/project-backend
 
 
-install newest docker from website
+3.install newest docker from website
 
 https://www.docker.com/
 
-run in terminal:
+4.run in terminal:
 
 docker build -t myflaskapp .           #mind the dot
 
 docker run -p 5000:5000 myflaskapp
 
-open in browser:
+5.open in browser:
 
 http://localhost:5000
 
